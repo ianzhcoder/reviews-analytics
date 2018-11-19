@@ -39,3 +39,19 @@ print ("總共有", len(good), "筆留言提到good")
 #印出頭尾兩筆留言     
 print(good[0])
 print(good[len(good)-1])
+
+#進階快寫法
+#篩選出留言中有提到"great"的留言可以寫成如下
+great = [d for d in data if "great" in d]
+print ("總共有", len(great), "筆留言提到great")
+#印出頭尾兩筆留言     
+print(great[0])
+print(great[len(great)-1])
+
+#將運算結果('bad' in data)加入清單中
+#bad = []
+#for d in data:
+#    bad.append('bad' in d)
+#print (bad)
+#進階快寫法
+bad = ['bad' in d for d in data]
